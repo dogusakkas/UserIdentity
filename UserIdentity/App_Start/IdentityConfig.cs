@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace UserIdentity.App_Start
+[assembly: OwinStartup(typeof(UserIdentity.IdentityConfig))]
+
+namespace UserIdentity
 {
     public class IdentityConfig
     {
